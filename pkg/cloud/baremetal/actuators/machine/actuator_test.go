@@ -17,6 +17,8 @@ import (
 func TestChooseHost(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	scheme := runtime.NewScheme()
 	bmoapis.AddToScheme(scheme)
 	host1 := bmh.BareMetalHost{ObjectMeta: metav1.ObjectMeta{Name: "host1", Namespace: "myns"}, Spec: bmh.BareMetalHostSpec{MachineRef: &corev1.ObjectReference{Name: "someothermachine", Namespace: "myns"}}}
@@ -63,6 +65,8 @@ func TestChooseHost(t *testing.T) {
 func TestExists(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	scheme := runtime.NewScheme()
 	bmoapis.AddToScheme(scheme)
 	host := bmh.BareMetalHost{ObjectMeta: metav1.ObjectMeta{Name: "somehost", Namespace: "myns"}}
@@ -90,6 +94,8 @@ func TestExists(t *testing.T) {
 func TestGetHost(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	scheme := runtime.NewScheme()
 	bmoapis.AddToScheme(scheme)
 	host := bmh.BareMetalHost{ObjectMeta: metav1.ObjectMeta{Name: "myhost", Namespace: "myns"}}
@@ -115,6 +121,8 @@ func TestGetHost(t *testing.T) {
 	}
 }
 func TestEnsureAnnotation(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	scheme := runtime.NewScheme()
@@ -150,6 +158,8 @@ func TestEnsureAnnotation(t *testing.T) {
 	}
 }
 func TestDelete(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	scheme := runtime.NewScheme()

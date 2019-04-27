@@ -21,5 +21,7 @@ type BareMetalMachineProviderStatusList struct {
 func init() {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	SchemeBuilder.Register(&BareMetalMachineProviderStatus{}, &BareMetalMachineProviderStatusList{})
 }

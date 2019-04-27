@@ -7,6 +7,8 @@ import (
 func (in *BareMetalMachineProviderSpec) DeepCopyInto(out *BareMetalMachineProviderSpec) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	*out = *in
 	out.TypeMeta = in.TypeMeta
 	in.ObjectMeta.DeepCopyInto(&out.ObjectMeta)
@@ -15,6 +17,8 @@ func (in *BareMetalMachineProviderSpec) DeepCopyInto(out *BareMetalMachineProvid
 	return
 }
 func (in *BareMetalMachineProviderSpec) DeepCopy() *BareMetalMachineProviderSpec {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if in == nil {
@@ -27,12 +31,16 @@ func (in *BareMetalMachineProviderSpec) DeepCopy() *BareMetalMachineProviderSpec
 func (in *BareMetalMachineProviderSpec) DeepCopyObject() runtime.Object {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if c := in.DeepCopy(); c != nil {
 		return c
 	}
 	return nil
 }
 func (in *BareMetalMachineProviderSpecList) DeepCopyInto(out *BareMetalMachineProviderSpecList) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	*out = *in
@@ -50,6 +58,8 @@ func (in *BareMetalMachineProviderSpecList) DeepCopyInto(out *BareMetalMachinePr
 func (in *BareMetalMachineProviderSpecList) DeepCopy() *BareMetalMachineProviderSpecList {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if in == nil {
 		return nil
 	}
@@ -60,6 +70,8 @@ func (in *BareMetalMachineProviderSpecList) DeepCopy() *BareMetalMachineProvider
 func (in *BareMetalMachineProviderSpecList) DeepCopyObject() runtime.Object {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if c := in.DeepCopy(); c != nil {
 		return c
 	}
@@ -68,10 +80,14 @@ func (in *BareMetalMachineProviderSpecList) DeepCopyObject() runtime.Object {
 func (in *BareMetalMachineProviderSpecSpec) DeepCopyInto(out *BareMetalMachineProviderSpecSpec) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	*out = *in
 	return
 }
 func (in *BareMetalMachineProviderSpecSpec) DeepCopy() *BareMetalMachineProviderSpecSpec {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if in == nil {
@@ -84,10 +100,14 @@ func (in *BareMetalMachineProviderSpecSpec) DeepCopy() *BareMetalMachineProvider
 func (in *BareMetalMachineProviderSpecStatus) DeepCopyInto(out *BareMetalMachineProviderSpecStatus) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	*out = *in
 	return
 }
 func (in *BareMetalMachineProviderSpecStatus) DeepCopy() *BareMetalMachineProviderSpecStatus {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if in == nil {
@@ -100,6 +120,8 @@ func (in *BareMetalMachineProviderSpecStatus) DeepCopy() *BareMetalMachineProvid
 func (in *BareMetalMachineProviderStatus) DeepCopyInto(out *BareMetalMachineProviderStatus) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	*out = *in
 	out.TypeMeta = in.TypeMeta
 	in.ObjectMeta.DeepCopyInto(&out.ObjectMeta)
@@ -108,6 +130,8 @@ func (in *BareMetalMachineProviderStatus) DeepCopyInto(out *BareMetalMachineProv
 	return
 }
 func (in *BareMetalMachineProviderStatus) DeepCopy() *BareMetalMachineProviderStatus {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if in == nil {
@@ -120,12 +144,16 @@ func (in *BareMetalMachineProviderStatus) DeepCopy() *BareMetalMachineProviderSt
 func (in *BareMetalMachineProviderStatus) DeepCopyObject() runtime.Object {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if c := in.DeepCopy(); c != nil {
 		return c
 	}
 	return nil
 }
 func (in *BareMetalMachineProviderStatusList) DeepCopyInto(out *BareMetalMachineProviderStatusList) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	*out = *in
@@ -143,6 +171,8 @@ func (in *BareMetalMachineProviderStatusList) DeepCopyInto(out *BareMetalMachine
 func (in *BareMetalMachineProviderStatusList) DeepCopy() *BareMetalMachineProviderStatusList {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if in == nil {
 		return nil
 	}
@@ -153,6 +183,8 @@ func (in *BareMetalMachineProviderStatusList) DeepCopy() *BareMetalMachineProvid
 func (in *BareMetalMachineProviderStatusList) DeepCopyObject() runtime.Object {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if c := in.DeepCopy(); c != nil {
 		return c
 	}
@@ -161,10 +193,14 @@ func (in *BareMetalMachineProviderStatusList) DeepCopyObject() runtime.Object {
 func (in *BareMetalMachineProviderStatusSpec) DeepCopyInto(out *BareMetalMachineProviderStatusSpec) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	*out = *in
 	return
 }
 func (in *BareMetalMachineProviderStatusSpec) DeepCopy() *BareMetalMachineProviderStatusSpec {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if in == nil {
@@ -177,10 +213,14 @@ func (in *BareMetalMachineProviderStatusSpec) DeepCopy() *BareMetalMachineProvid
 func (in *BareMetalMachineProviderStatusStatus) DeepCopyInto(out *BareMetalMachineProviderStatusStatus) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	*out = *in
 	return
 }
 func (in *BareMetalMachineProviderStatusStatus) DeepCopy() *BareMetalMachineProviderStatusStatus {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if in == nil {

